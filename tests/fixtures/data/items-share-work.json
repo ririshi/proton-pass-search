@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "item-sso",
+      "share_id": "share-work",
+      "vault_id": "v-work",
+      "content": {
+        "title": "Work SSO",
+        "note": "",
+        "item_uuid": "u5",
+        "content": {
+          "Login": {
+            "email": "",
+            "username": "bob",
+            "password": "sso-secret",
+            "urls": ["https://github.com/org", "https://sso.example.com"],
+            "totp_uri": "",
+            "passkeys": [],
+            "autofill_urls": []
+          }
+        },
+        "extra_fields": [],
+        "platform_specific": null,
+        "custom_icon": null
+      },
+      "state": "Active",
+      "flags": [],
+      "create_time": "2025-01-01T00:00:00Z",
+      "modify_time": "2025-01-01T00:00:00Z",
+      "last_use_time": null
+    }
+  ],
+  "folders": []
+}

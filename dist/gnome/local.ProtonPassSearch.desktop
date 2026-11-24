@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Proton Pass Search
+Comment=Type “pp” and a name in the overview to copy a Proton Pass password
+Icon=dialog-password
+Exec=xdg-open https://pass.proton.me
+Categories=Utility;

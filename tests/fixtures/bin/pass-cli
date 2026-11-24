@@ -1,0 +1,31 @@
+#!/bin/sh
+# Stands in for Proton's pass-cli in integration tests: serves the files in $FAKE_PASS_DIR and
+# appends each call to calls.log there. A file named `fail` makes every call fail with its
+# contents on stderr; `fail-view` does the same for `item view` only.
+set -eu
+d="$FAKE_PASS_DIR"
+echo "$*" >> "$d/calls.log"
+if [ -f "$d/fail" ]; then cat "$d/fail" >&2; exit 1; fi
+case "$1 $2" in
+"vault list")
+    cat "$d/vaults.json" ;;
+"item list")
+    shift 2
+    share=""
+    while [ $# -gt 0 ]; do
+        if [ "$1" = --share-id ]; then share="$2"; fi
+        shift
+    done
+    cat "$d/items-$share.json" ;;
+"item view")
+    if [ -f "$d/fail-view" ]; then cat "$d/fail-view" >&2; exit 1; fi
+    item=$(echo "$3" | cut -d/ -f4)
+    field=$(echo "$3" | cut -d/ -f5)
+    cat "$d/$field-$item" ;;
+"item totp")
+    item=$(echo "$3" | cut -d/ -f4)
+    cat "$d/totp-$item.json" ;;
+*)
+    echo "fake pass-cli: unsupported call: $*" >&2
+    exit 2 ;;
+esac

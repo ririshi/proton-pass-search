@@ -1,0 +1,111 @@
+{
+  "items": [
+    {
+      "id": "item-github",
+      "share_id": "share-personal",
+      "vault_id": "v-personal",
+      "content": {
+        "title": "GitHub",
+        "note": "recovery codes in the safe",
+        "item_uuid": "u1",
+        "content": {
+          "Login": {
+            "email": "alice@example.com",
+            "username": "alice",
+            "password": "gh-secret-pass",
+            "urls": ["https://github.com/login"],
+            "totp_uri": "otpauth://totp/GitHub:alice?secret=JBSWY3DPEHPK3PXP",
+            "passkeys": [],
+            "autofill_urls": [{ "url": "https://github.com/login", "mode": "default" }]
+          }
+        },
+        "extra_fields": [],
+        "platform_specific": null,
+        "custom_icon": null
+      },
+      "state": "Active",
+      "flags": [],
+      "create_time": "2025-01-01T00:00:00Z",
+      "modify_time": "2025-01-01T00:00:00Z",
+      "last_use_time": null
+    },
+    {
+      "id": "item-bank",
+      "share_id": "share-personal",
+      "vault_id": "v-personal",
+      "content": {
+        "title": "Bänk",
+        "note": "",
+        "item_uuid": "u2",
+        "content": {
+          "Login": {
+            "email": "alice@example.com",
+            "username": "",
+            "password": "bank-secret",
+            "urls": [],
+            "totp_uri": "",
+            "passkeys": [],
+            "autofill_urls": []
+          }
+        },
+        "extra_fields": [],
+        "platform_specific": null,
+        "custom_icon": null
+      },
+      "state": "Active",
+      "flags": [],
+      "create_time": "2025-01-01T00:00:00Z",
+      "modify_time": "2025-01-01T00:00:00Z",
+      "last_use_time": null
+    },
+    {
+      "id": "item-old-github",
+      "share_id": "share-personal",
+      "vault_id": "v-personal",
+      "content": {
+        "title": "Old GitHub",
+        "note": "",
+        "item_uuid": "u3",
+        "content": {
+          "Login": {
+            "email": "",
+            "username": "old",
+            "password": "trashed-secret",
+            "urls": ["https://github.com"],
+            "totp_uri": "",
+            "passkeys": [],
+            "autofill_urls": []
+          }
+        },
+        "extra_fields": [],
+        "platform_specific": null,
+        "custom_icon": null
+      },
+      "state": "Trashed",
+      "flags": [],
+      "create_time": "2025-01-01T00:00:00Z",
+      "modify_time": "2025-01-01T00:00:00Z",
+      "last_use_time": null
+    },
+    {
+      "id": "item-note",
+      "share_id": "share-personal",
+      "vault_id": "v-personal",
+      "content": {
+        "title": "GitHub notes",
+        "note": "a note, not a login",
+        "item_uuid": "u4",
+        "content": { "Note": {} },
+        "extra_fields": [],
+        "platform_specific": null,
+        "custom_icon": null
+      },
+      "state": "Active",
+      "flags": [],
+      "create_time": "2025-01-01T00:00:00Z",
+      "modify_time": "2025-01-01T00:00:00Z",
+      "last_use_time": null
+    }
+  ],
+  "folders": []
+}

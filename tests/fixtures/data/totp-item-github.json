@@ -1,0 +1,1 @@
+{ "totp_uri": "otpauth://totp/GitHub:alice?secret=JBSWY3DPEHPK3PXP", "totp": "123456" }
